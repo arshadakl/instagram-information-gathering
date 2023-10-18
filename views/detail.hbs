@@ -1,0 +1,77 @@
+<section>
+    <div class="container-fluid">
+        <div class="container my-5">
+            <div class="card">
+                <h5 class="card-header">{{insta.username}}</h5>
+                <div class="card-body text-light card-bg">
+                    {{!-- <img src="{{insta.profile_pic_url_hd}}" alt=""> --}}
+                    <a href="{{insta.profile_pic_url_hd}}" target="_blank">
+                        <img class="dppic1"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdb4mQjVBs00LeAiPnQ4_zAyZOqfju550gAg&usqp=CAU"
+                            alt="Link to Image">
+                    </a>
+
+                    <h6 class="card-title"> Bio :{{insta.biography}}</h6>
+                    <h6 class="card-title">Followers :{{insta.edge_followed_by.count}}</h6>
+                    {{#if insta.is_verified}}
+                    <h6 class="card-title">Verified Account <svg aria-label="Verified" class="x1lliihq x1n2onr6"
+                            color="rgb(0, 149, 246)" fill="rgb(0, 149, 246)" height="18" role="img" viewBox="0 0 40 40"
+                            width="18">
+                            <title>Verified</title>
+                            <path
+                                d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v5.905h5.975L14.638 40l5.36-3.094L25.358 40l3.232-5.6h6.162v-6.01L40 25.359 36.905 20 40 14.641l-5.248-3.03v-6.46h-6.419L25.358 0l-5.36 3.094Zm7.415 11.225 2.254 2.287-11.43 11.5-6.835-6.93 2.244-2.258 4.587 4.581 9.18-9.18Z"
+                                fill-rule="evenodd"></path>
+                        </svg></h6>
+                    {{else}}
+                    <h6 class="card-title">Not Verified Account </h6>
+                    {{/if}}
+
+
+                    {{!-- <h6 class="card-title">{{insta.}}</h6>
+                    <h6 class="card-title">{{insta.}}</h6> --}}
+
+                    <a href="#" class="btn btn-primary">find More</a>
+                    <p class="fs-4 text-center">Post</p>
+                    <div class="center-card">
+                        <div class="container center-card row">
+                            {{#each media}}
+                            <div class="card col-md-3 m-3">
+                                {{#if media.node.video_url}}
+                                <video src="{{node.video_url}}"></video>
+                                {{else}}
+                                <img src="{{node.thumbnail_src}}" alt="">
+                                {{/if}}
+                                <div class="card-body">
+                                    <p class="card-text">view : {{ndoe.video_view_count}}</p>
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container-fluid center-card">
+        <div class="container row center-card">
+            {{#each rel}}
+            <div class="card col-md-3 m-3">
+                <div class="card-body">
+                    <img src="{{node.profile_pic_url}}" alt="">
+                    <h5 class="card-title">Name :{{node.full_name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">User Name{{node.username}}</h6>
+                    <a href="{{node.profile_pic_url}}">clike to See Profile Pic</a>
+                    <a href="{{node.profile_pic_url}}" target="_blank">
+                        <img class="dppic2"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdb4mQjVBs00LeAiPnQ4_zAyZOqfju550gAg&usqp=CAU"
+                            alt="Link to Image">
+                    </a>
+
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>

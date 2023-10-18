@@ -1,0 +1,45 @@
+.display-area{
+  
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+body{
+  background-color: #1b2a41;
+}
+.nav-bg{
+  background-color: #0c1821;
+}
+.box-bg{
+    background-color: #324a5f;
+}
+.card-bg{
+  background-color: #324a5f;
+}
+.footer{
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.dppic1{
+  border-radius: 50%;
+  width: 50px;
+}
+.dppic2{
+  border-radius: 50%;
+  width: 20px;
+}
+
+/* @media screen and (min-width: 550px){
+  .display-area{
+  height: 85vh;
+
+  }
+} */
