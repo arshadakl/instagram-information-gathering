@@ -52,4 +52,11 @@ router.post("/", (req, res) => {
     });
 });
 
+const list = async(req,res)=>{
+    try {
+        
+    } catch (error) {
+        
+    }
+}
 module.exports = router;
